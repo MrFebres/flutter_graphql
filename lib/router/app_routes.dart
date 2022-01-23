@@ -6,8 +6,9 @@ class AppRoutes {
   static const initialRoute = HomePage.routeName;
 
   static Map<String, Widget Function(BuildContext)> routes = {
-    HomePage.routeName: (_) => const HomePage(),
     CharactersPage.routeName: (_) => const CharactersPage(),
     EpisodesPage.routeName: (_) => const EpisodesPage(),
+    HomePage.routeName: (_) => const HomePage(),
+    LocationsPage.routeName: (_) => const LocationsPage(),
   };
 }

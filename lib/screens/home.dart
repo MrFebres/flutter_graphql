@@ -9,13 +9,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-
     return Scaffold(
       body: Stack(
-        children: [
-          TransitionedContainer(image: 'prehome', size: size),
-          TransitionedContainer(image: 'home', size: size),
+        children: const [
+          TransitionedContainer(image: 'prehome'),
+          TransitionedContainer(image: 'home'),
         ],
       ),
     );
