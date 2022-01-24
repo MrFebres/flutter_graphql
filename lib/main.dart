@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'providers/graphql_provider.dart';
+import 'providers/characters_provider.dart';
 import 'router/app_routes.dart';
 
 // void main() => runApp(const MyApp());
 void main() => runApp(MultiProvider(providers: [
-      ChangeNotifierProvider(create: (_) => GraphQLProvider()),
+      ChangeNotifierProvider(
+        create: (_) => CharactersProvider(),
+        lazy: false,
+      ),
     ], child: const MyApp()));
 
 class MyApp extends StatelessWidget {
